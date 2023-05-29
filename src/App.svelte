@@ -1,5 +1,6 @@
 <script>
     // Imports
+    import MouseEffect from "./components/MouseEffect.svelte"
 </script>
 
 <main>
@@ -32,7 +33,7 @@
         </div>
     </footer> -->
     <!-- <Overlay /> -->
-    <!-- <MouseEffect /> -->
+    <MouseEffect />
 </main>
 
 <style>
