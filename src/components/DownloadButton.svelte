@@ -1,7 +1,20 @@
 <script>
+    // Place resume PDF in public folder
+    function downloadPDF() {
+        const url = "../public/Resume Jacob Druery 2019.pdf"
+        fetch(url)
+            .then((response) => response.blob())
+            .then((blob) => {
+                const link = document.createElement("a")
+                link.href = URL.createObjectURL(blob)
+                link.download = "Jacob-Druery-Resume.pdf"
+                link.click()
+                URL.revokeObjectURL(link.href)
+            })
+    }
 </script>
 
-<button class="download">Download Resume</button>
+<button on:click={downloadPDF} class="download">Download Resume</button>
 
 <style>
     .download {
