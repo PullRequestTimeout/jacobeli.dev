@@ -21,6 +21,11 @@
 </svg>
 
 <style>
+    svg {
+        position: absolute;
+        pointer-events: none;
+    }
+
     .static-overlay {
         pointer-events: none;
         position: fixed;
