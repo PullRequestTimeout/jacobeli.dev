@@ -12,7 +12,7 @@
 
     function handlePointerMove(event) {
         const { clientX, clientY } = event
-        blob.animate({ left: `${clientX}px`, top: `${clientY}px` }, { duration: 10000, fill: "forwards" })
+        blob.animate({ left: `${clientX}px`, top: `${clientY}px` }, { duration: 8000, fill: "forwards" })
     }
 </script>
 
@@ -56,6 +56,12 @@
             aspect-ratio: 1;
             height: 25rem;
             transform: translate(-50%, -50%) scale(1) rotate(180deg);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .mouse-effect {
+            display: none;
         }
     }
 </style>

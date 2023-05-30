@@ -8,7 +8,7 @@
     }
 
     onMount(() => {
-        const interval = setInterval(updateSeed, 10)
+        const interval = setInterval(updateSeed, 20)
 
         onDestroy(() => {
             clearInterval(interval)
@@ -20,7 +20,7 @@
 <svg>
     <defs>
         <filter id="static">
-            <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="1" {seed} />
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="1" {seed} />
         </filter>
     </defs>
 </svg>
