@@ -1,7 +1,7 @@
 <script>
     // Place resume PDF in public folder
     function downloadPDF() {
-        const url = "../public/Resume Jacob Druery 2019.pdf"
+        const url = "/Jacob-Druery-Resume.pdf"
         fetch(url)
             .then((response) => response.blob())
             .then((blob) => {
@@ -19,7 +19,7 @@
 <style>
     .download {
         position: relative;
-        padding: 1rem 4rem 1rem 2rem;
+        padding: 1rem 4rem 1rem 1rem;
         font-size: 1.2rem;
         border-radius: 2rem;
         border: none;
@@ -30,6 +30,7 @@
     .download:hover {
         cursor: pointer;
         background-color: #a17945;
+        color: #fff;
     }
 
     .download:hover::before {
@@ -59,6 +60,10 @@
         .download {
             background-color: #fff;
             color: #000;
+        }
+
+        .download::before {
+            color: #fff;
         }
     }
 </style>
