@@ -28,7 +28,7 @@
         background-color: rgba(161, 121, 69, 0.5);
         border-radius: 50%;
         animation: blob 30s infinite;
-        z-index: -1;
+        z-index: -100;
     }
 
     .blur {
@@ -37,7 +37,7 @@
         height: 100vh;
         width: 100vw;
         position: fixed;
-        z-index: 1;
+        z-index: -50;
         backdrop-filter: blur(10rem);
     }
 
