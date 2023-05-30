@@ -1,18 +1,13 @@
 <script>
-    import { onMount, onDestroy } from "svelte"
+    import { onMount } from "svelte"
 
     let seed = Math.floor(Math.random() * 999) // Initial seed value
 
-    const updateSeed = () => {
-        seed = Math.floor(Math.random() * 999)
-    }
-
     onMount(() => {
-        const interval = setInterval(updateSeed, 20)
-
-        onDestroy(() => {
-            clearInterval(interval)
-        })
+        const updateSeed = () => {
+            seed = Math.floor(Math.random() * 999)
+        }
+        setInterval(updateSeed, 20)
     })
 </script>
 
