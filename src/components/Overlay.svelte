@@ -22,6 +22,7 @@
 
 <style>
     .static-overlay {
+        pointer-events: none;
         position: fixed;
         z-index: 1000;
         top: 0;
