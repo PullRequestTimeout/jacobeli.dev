@@ -22,7 +22,7 @@
         videoElement.addEventListener("mouseout", () => {
             videoElement.pause()
             // This delays returning the video back to one until CSS animation is finished,
-            setTimeout(() => (videoElement.currentTime = 1), 500)
+            setTimeout(() => (videoElement.currentTime = 0), 500)
         })
     })
 </script>
