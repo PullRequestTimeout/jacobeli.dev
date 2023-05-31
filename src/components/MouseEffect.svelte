@@ -11,15 +11,27 @@
     })
 
     function handlePointerMove(event) {
-        const { pageX, pageY } = event
-        blob.animate({ left: `${pageX}px`, top: `${pageY}px` }, { duration: 5000, fill: "forwards" })
+        const { clientX, clientY } = event
+        blob.animate({ left: `${clientX}px`, top: `${clientY}px` }, { duration: 5000, fill: "forwards" })
     }
 </script>
 
-<div on:mousemove={handlePointerMove} bind:this={blob} class="mouse-effect" />
+<div class="container">
+    <div on:mousemove={handlePointerMove} bind:this={blob} class="mouse-effect" />
+</div>
 <div class="blur" />
 
 <style>
+    .container {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: -99;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
     .mouse-effect {
         top: 50%;
         left: 50%;
