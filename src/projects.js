@@ -5,8 +5,8 @@ export const projects = [
         date: "2023",
         description:
             "Dirt Surfer is a forecasting webapp for moutainbike trail conditions initially focusing on Rossland BC and surrounding area, and then expanding to other regions over time. Frontend built using React with Material UI, backend API built using Express and MongoDB. ",
-        image: "src/assets/dirtsurfer.jpg",
-        video: "/1023AerialsHeroVideo.mp4",
+        image: "src/assets/dirtsurfer.jpg", //Dummy data
+        video: "src/assets/gooeystartpagevideo.mp4", //Dummy data
         link: "https://dirtsurfer.app",
     },
     {
@@ -15,8 +15,8 @@ export const projects = [
         date: "2023",
         description:
             "A landing page website for a local manual therapy/osteopathy business located in Rossland, BC. Work includes photograpy/editing, development and deployment. Web Design in collaboration with Sean Makura.",
-        image: "src/assets/dirtsurfer.jpg",
-        video: "/1023AerialsHeroVideo.mp4",
+        image: "src/assets/rootedinmotionimg.jpg",
+        video: "src/assets/rootedinmotionvideo.mp4",
         link: "https://rootedinmotion.ca",
     },
     {
@@ -25,9 +25,9 @@ export const projects = [
         date: "2022",
         description:
             "Gooey (GUI) is a startpage to replace the browser's default new tab in the form of a Firefox-Addon. Using vanilla JS, HTML, and CSS as a project to practice fundamentals, API calls, and build a CRUD GUI from scratch. Drawing from /r/startpages for some inspiration.",
-        image: "src/assets/gooeystartpage.jpg",
-        video: "/1023AerialsHeroVideo.mp4",
-        link: "https://addons.mozilla.org/en-CA/firefox/addon/gooey-startpage/",
+        image: "src/assets/gooeystartpageimg.jpg",
+        video: "src/assets/gooeystartpagevideo.mp4",
+        link: "https://addons.mozilla.org/en-CA/firefox/addon/gooey-startpage/", //Needs replacing when Chrome version is published
     },
     {
         title: ".This",
@@ -36,7 +36,7 @@ export const projects = [
         description:
             "That's right, this website! jacobeli.dev is my personal portfolio built with Svelte. Web Design in collaboration with Sean Makura.",
         image: "src/assets/jacobeli.jpg",
-        video: "/1023AerialsHeroVideo.mp4",
+        video: "src/assets/gooeystartpagevideo.mp4", //Dummy data
         link: "https://jacobeli.dev",
     },
 ]
