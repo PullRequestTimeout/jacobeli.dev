@@ -27,7 +27,7 @@
     })
 </script>
 
-<article class="project-card" style="--title-offset: {titleOffset}px; --video-offset: {videoOffset}px">
+<article class="project-card" style="--title-offset: {`${titleOffset}px`}; --video-offset: {`${videoOffset}px`}">
     <div class="project-card__text">
         <div bind:offsetHeight={titleOffset} class="project-card__title">
             <h2>{title}</h2>
