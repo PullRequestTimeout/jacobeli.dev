@@ -35,7 +35,7 @@
         top: 0;
         left: 0;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         position: fixed;
         z-index: -50;
         backdrop-filter: blur(10rem);
