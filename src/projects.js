@@ -19,6 +19,26 @@ export const projects = [
         video: "/1023AerialsHeroVideo.mp4",
         link: "https://rootedinmotion.ca",
     },
+    {
+        title: "Gooey Startpage",
+        subtitle: "Browser Extension",
+        date: "2022",
+        description:
+            "Gooey (GUI) is a startpage to replace the browser's default new tab in the form of a Firefox-Addon. Using vanilla JS, HTML, and CSS as a project to practice fundamentals, API calls, and build a CRUD GUI from scratch. Drawing from /r/startpages for some inspiration.",
+        image: "src/assets/gooeystartpage.jpg",
+        video: "/1023AerialsHeroVideo.mp4",
+        link: "https://addons.mozilla.org/en-CA/firefox/addon/gooey-startpage/",
+    },
+    {
+        title: ".This",
+        subtitle: "svelte portfolio",
+        date: "2023",
+        description:
+            "That's right, this website! jacobeli.dev is my personal portfolio built with Svelte. Web Design in collaboration with Sean Makura.",
+        image: "src/assets/jacobeli.jpg",
+        video: "/1023AerialsHeroVideo.mp4",
+        link: "https://jacobeli.dev",
+    },
 ]
 
 // {
