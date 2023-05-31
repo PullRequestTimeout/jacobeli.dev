@@ -34,7 +34,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        opacity: 0.15;
+        opacity: 0.2;
         filter: url(#static);
     }
 </style>
