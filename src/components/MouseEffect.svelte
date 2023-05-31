@@ -11,8 +11,8 @@
     })
 
     function handlePointerMove(event) {
-        const { clientX, clientY } = event
-        blob.animate({ left: `${clientX}px`, top: `${clientY}px` }, { duration: 8000, fill: "forwards" })
+        const { pageX, pageY } = event
+        blob.animate({ left: `${pageX}px`, top: `${pageY}px` }, { duration: 5000, fill: "forwards" })
     }
 </script>
 
