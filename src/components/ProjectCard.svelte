@@ -24,13 +24,10 @@
             // This delays returning the video back to one until CSS animation is finished,
             setTimeout(() => (videoElement.currentTime = 1), 500)
         })
-
-        console.log(titleOffset)
-        console.log(videoOffset)
     })
 </script>
 
-<article class="project-card" style="--title-offset: {`${titleOffset}px`}; --video-offset: {`${videoOffset}px`}">
+<article class="project-card" style="--title-offset: {titleOffset}px; --video-offset: {videoOffset}px">
     <div class="project-card__text">
         <div bind:offsetHeight={titleOffset} class="project-card__title">
             <h2>{title}</h2>
@@ -39,7 +36,7 @@
         </div>
         <p class="project-card__description">{description}</p>
     </div>
-    <a href={link} class="project-card__media">
+    <a href={link} class="project-card__media" target="_blank">
         <div>
             <video bind:offsetHeight={videoOffset} bind:this={videoElement} loop muted>
                 <source src={video} type="video/mp4" />
@@ -57,6 +54,7 @@
         overflow: hidden;
         max-height: var(--title-offset);
         transition: 0.5s;
+        margin: 1rem 0;
     }
 
     .project-card__description {
