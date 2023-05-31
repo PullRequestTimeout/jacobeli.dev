@@ -16,12 +16,13 @@
 
     onMount(() => {
         videoElement.addEventListener("mouseenter", () => {
-            videoElement.play()
+            // Delays playing video until CSS animation is finished
+            setTimeout(() => videoElement.play(), 500)
         })
 
         videoElement.addEventListener("mouseout", () => {
             videoElement.pause()
-            // This delays returning the video back to one until CSS animation is finished,
+            // This delays returning the video back to one until CSS animation is finished
             setTimeout(() => (videoElement.currentTime = 0), 500)
         })
     })
