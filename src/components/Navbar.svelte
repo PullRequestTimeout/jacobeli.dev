@@ -85,11 +85,11 @@
     }
 
     label::before {
-        top: 30%;
+        top: 35%;
     }
 
     label::after {
-        top: 70%;
+        top: 65%;
     }
 
     input[type="checkbox"]:checked ~ nav {
@@ -147,6 +147,40 @@
 
         a::after {
             background-color: var(--clr-white);
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        a {
+            color: var(--clr-black);
+        }
+
+        a::after {
+            background-color: var(--clr-black);
+        }
+
+        nav {
+            background-color: var(--clr-black);
+        }
+
+        label::after,
+        label::before {
+            background-color: var(--clr-black);
+        }
+
+        input[type="checkbox"]:checked ~ label::before,
+        input[type="checkbox"]:checked ~ label::after {
+            background-color: var(--clr-white);
+        }
+
+        input[type="checkbox"]:checked ~ nav a {
+            color: var(--clr-white);
+        }
+
+        @media screen and (min-width: 768px) {
+            nav {
+                background-color: transparent;
+            }
         }
     }
 </style>
