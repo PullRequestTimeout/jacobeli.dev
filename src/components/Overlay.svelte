@@ -1,17 +1,17 @@
 <script>
-    import { onMount } from "svelte"
+    // import { onMount } from "svelte"
 
-    let seed = Math.floor(Math.random() * 999) // Initial seed value
+    let seed = Math.floor(Math.random() * 50) // Initial seed value
 
-    onMount(() => {
-        const updateSeed = () => {
-            seed = Math.floor(Math.random() * 999)
-        }
-        setInterval(updateSeed, 20)
-    })
+    // onMount(() => {
+    //     const updateSeed = () => {
+    //         seed = Math.floor(Math.random() * 50)
+    //     }
+    //     setInterval(updateSeed, 100)
+    // })
 </script>
 
-<div class="static-overlay" />
+<div class="static-overlay" style="filter: url(#static);" />
 <svg>
     <defs>
         <filter id="static">
@@ -34,7 +34,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        opacity: 0.2;
+        opacity: 0.125;
         filter: url(#static);
     }
 </style>
