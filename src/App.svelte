@@ -2,6 +2,9 @@
     // Imports
     import MouseEffect from "./components/MouseEffect.svelte"
     import Overlay from "./components/Overlay.svelte"
+    import ProjectCard from "./components/ProjectCard.svelte"
+    import DownloadButton from "./components/DownloadButton.svelte"
+    import { projects } from "./projects"
 </script>
 
 <main>
@@ -11,9 +14,20 @@
     <!-- <Hero /> -->
     <!-- <p class="blurb"></p> -->
     <!-- <section class="works">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <h2>Works</h2>
+        {#each projects as project}
+            <hr />
+            <ProjectCard
+                title={project.title}
+                subtitle={project.subtitle}
+                date={project.date}
+                description={project.description}
+                video={project.video}
+                image={project.image}
+                link={project.link}
+            />
+        {/each}
+        <hr />
     </section> -->
     <!-- <section class="about">
         <h2></h2>
@@ -33,6 +47,7 @@
             <SocialLink />
         </div>
     </footer> -->
+
     <Overlay />
     <MouseEffect />
 </main>
