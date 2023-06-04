@@ -2,15 +2,14 @@
     // Imports
     import MouseEffect from "./components/MouseEffect.svelte"
     import Overlay from "./components/Overlay.svelte"
+    import Navbar from "./components/Navbar.svelte"
     import ProjectCard from "./components/ProjectCard.svelte"
     import DownloadButton from "./components/DownloadButton.svelte"
     import { projects } from "./projects"
 </script>
 
 <main>
-    <!-- markup and custom components -->
-
-    <!-- <Navbar /> -->
+    <Navbar />
     <!-- <Hero /> -->
     <!-- <p class="blurb"></p> -->
     <!-- <section class="works">
@@ -48,10 +47,19 @@
         </div>
     </footer> -->
 
-    <Overlay />
-    <MouseEffect />
+    <!-- <Overlay /> -->
+    <!-- <MouseEffect /> -->
 </main>
 
 <style>
     /* style for internal markup */
+    main {
+        padding: 1rem;
+    }
+    /* Follow this up with all dimensions */
+    @media screen and (min-width: 768px) {
+        main {
+            padding: 2rem;
+        }
+    }
 </style>
