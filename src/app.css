@@ -134,13 +134,12 @@ a {
 
 html {
     overflow-x: hidden;
+    overscroll-behavior-y: none;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Mulish:wght@200;400&display=swap");
 
 :root {
     --clr-gold: #a17945;
-    --clr-black: #1b1b1b;
+    --clr-black: #171717;
     --clr-white: #f7f7f7;
 
     color-scheme: light dark;
@@ -152,6 +151,10 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+}
+
+*::selection {
+    background-color: var(--clr-gold);
 }
 
 .mulish {
