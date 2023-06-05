@@ -1,13 +1,11 @@
 <script>
-    // import DarkModeToggle from "./DarkModeToggle.svelte"
-
-    let checked = false
+    import DarkModeToggle from "./DarkModeToggle.svelte"
 </script>
 
 <header class="mulish">
     <h1>JACOBELI.DEV</h1>
-    <!-- <DarkModeToggle /> -->
-    <input type="checkbox" id="navCheckbox" bind:checked />
+    <DarkModeToggle />
+    <input type="checkbox" id="navCheckbox" />
     <label for="navCheckbox" />
 
     <nav>
@@ -24,7 +22,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        overflow-x: hidden;
     }
 
     h1 {
