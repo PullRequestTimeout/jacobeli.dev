@@ -3,6 +3,7 @@
     import MouseEffect from "./components/MouseEffect.svelte"
     import Overlay from "./components/Overlay.svelte"
     import Navbar from "./components/Navbar.svelte"
+    import Hero from "./components/Hero.svelte"
     import ProjectCard from "./components/ProjectCard.svelte"
     import DownloadButton from "./components/DownloadButton.svelte"
     import { projects } from "./projects"
@@ -10,7 +11,7 @@
 
 <main>
     <Navbar />
-    <!-- <Hero /> -->
+    <Hero />
     <!-- <p class="blurb"></p> -->
     <!-- <section class="works">
         <h2>Works</h2>
@@ -47,12 +48,13 @@
         </div>
     </footer> -->
 
-    <!-- <Overlay /> -->
-    <!-- <MouseEffect /> -->
+    <Overlay />
+    <MouseEffect />
 </main>
 
 <style>
-    /* style for internal markup */
+    @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Mulish:wght@200;400&display=swap");
+
     main {
         padding: 1rem;
     }
@@ -62,4 +64,6 @@
             padding: 2rem;
         }
     }
+
+    /* Breakpoints 320, 640, 768, 1024, 1280, 1536, 1920 */
 </style>
