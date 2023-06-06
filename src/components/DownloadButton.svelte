@@ -31,13 +31,13 @@
 </script>
 
 {#if type == "download"}
-    <button on:click={downloadPDF} class="download" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></button>
+    <button on:click={downloadPDF} class="button" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></button>
 {:else if type == "link" && link != ""}
-    <button on:click={followLink} class="download" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></button>
+    <button on:click={followLink} class="button" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></button>
 {/if}
 
 <style>
-    .download {
+    .button {
         position: relative;
         z-index: 300;
         padding: 1rem 4rem 1rem 1rem;
@@ -49,27 +49,27 @@
         overflow: hidden;
     }
 
-    .download span {
+    .button span {
         position: relative;
         z-index: 304;
     }
 
-    .download:hover {
+    .button:hover {
         cursor: pointer;
         background-color: var(--clr-gold);
         color: var(--clr-white);
     }
 
-    .download:hover::before {
+    .button:hover::before {
         transform: translateY(-50%) rotate(var(--rotate));
         color: var(--clr-white);
     }
 
-    .download:hover::after {
+    .button:hover::after {
         transform: translateY(-50%) scale(10);
     }
 
-    .download::before {
+    .button::before {
         content: "→";
         font-size: 1.8rem;
         font-family: sans-serif;
@@ -79,14 +79,14 @@
         background-color: transparent;
     }
 
-    .download::after {
+    .button::after {
         content: "";
         background-color: var(--clr-gold);
         z-index: 302;
     }
 
-    .download::after,
-    .download::before {
+    .button::after,
+    .button::before {
         transition: 0.2s ease;
         position: absolute;
         transform: translateY(-50%);
@@ -98,12 +98,12 @@
     }
 
     @media (prefers-color-scheme: dark) {
-        .download {
+        .button {
             background-color: var(--clr-white);
             color: var(--clr-black);
         }
 
-        .download::before {
+        .button::before {
             color: var(--clr-white);
         }
     }
