@@ -11,14 +11,17 @@
         rotate = "-30"
     }
 
+    // Opens a new tab if the link is not an id
     function followLink() {
-        window.open(url, "_blank")
+        if (url.charAt(0) == "#") {
+            window.location.href = url
+        } else {
+            window.open(url, "_blank")
+        }
     }
 </script>
 
 <button on:click={followLink} class="button baloo" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></button>
-
-<!-- {/if} -->
 
 <style>
     .button {
