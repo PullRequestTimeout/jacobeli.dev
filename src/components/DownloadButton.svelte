@@ -1,46 +1,32 @@
 <script>
     export let innerText
-    export let type
-    export let link = ""
+    export let orientation
+    export let url = ""
 
     let rotate
 
-    if (type == "download") {
+    if (orientation == "down") {
         rotate = "30"
-    } else if (type == "link") {
+    } else if (orientation == "up") {
         rotate = "-30"
     }
 
-    // Place resume PDF in public folder
-    function downloadPDF() {
-        const url = "/Jacob-Druery-Resume.pdf"
-        fetch(url)
-            .then((response) => response.blob())
-            .then((blob) => {
-                const link = document.createElement("a")
-                link.href = URL.createObjectURL(blob)
-                link.download = "Jacob-Druery-Resume.pdf"
-                link.click()
-                URL.revokeObjectURL(link.href)
-            })
-    }
-
     function followLink() {
-        window.open(link, "_blank")
+        window.open(url, "_blank")
     }
 </script>
 
-{#if type == "download"}
-    <button on:click={downloadPDF} class="button" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></button>
-{:else if type == "link" && link != ""}
-    <button on:click={followLink} class="button" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></button>
-{/if}
+<button on:click={followLink} class="button baloo" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></button>
+
+<!-- {/if} -->
 
 <style>
     .button {
         position: relative;
+        min-width: 10rem;
+        text-align: left;
         z-index: 300;
-        padding: 1rem 4rem 1rem 1rem;
+        padding: 0.8rem 4rem 0.8rem 1rem;
         font-size: 1.2rem;
         border-radius: 2rem;
         border: none;
