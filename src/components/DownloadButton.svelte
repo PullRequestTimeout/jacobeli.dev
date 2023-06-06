@@ -1,5 +1,15 @@
 <script>
-    export let text
+    export let innerText
+    export let type
+    export let link = ""
+
+    let rotate
+
+    if (type == "download") {
+        rotate = "30"
+    } else if (type == "link") {
+        rotate = "-30"
+    }
 
     // Place resume PDF in public folder
     function downloadPDF() {
@@ -14,9 +24,17 @@
                 URL.revokeObjectURL(link.href)
             })
     }
+
+    function followLink() {
+        window.open(link, "_blank")
+    }
 </script>
 
-<button on:click={downloadPDF} class="download"><span>{text}</span></button>
+{#if type == "download"}
+    <button on:click={downloadPDF} class="download" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></button>
+{:else if type == "link" && link != ""}
+    <button on:click={followLink} class="download" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></button>
+{/if}
 
 <style>
     .download {
@@ -43,7 +61,7 @@
     }
 
     .download:hover::before {
-        transform: translateY(-50%) rotate(30deg);
+        transform: translateY(-50%) rotate(var(--rotate));
         color: var(--clr-white);
     }
 
