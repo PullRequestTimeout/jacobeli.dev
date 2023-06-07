@@ -3,7 +3,7 @@
         <h3 class="baloo">Jacob Druery</h3>
         <h2 class="mulish">Creative Developer</h2>
     </div>
-    <p class="subtitle baloo">Building quality-focused experiences on the web</p>
+    <p class="subtitle baloo">Crafting bespoke web experiences</p>
 </section>
 
 <style>
