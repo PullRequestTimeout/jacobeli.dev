@@ -27,6 +27,7 @@
     .button {
         position: relative;
         min-width: 10rem;
+        width: max-content;
         text-align: left;
         z-index: 300;
         padding: 0.8rem 4rem 0.8rem 1rem;
