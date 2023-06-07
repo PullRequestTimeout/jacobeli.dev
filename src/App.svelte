@@ -5,14 +5,15 @@
     import Navbar from "./components/Navbar.svelte"
     import Hero from "./components/Hero.svelte"
     import ProjectCard from "./components/ProjectCard.svelte"
-    import DownloadButton from "./components/DownloadButton.svelte"
+    import FancyButton from "./components/FancyButton.svelte"
+    import Blurb from "./components/Blurb.svelte"
     import { projects } from "./projects"
 </script>
 
 <main>
     <Navbar />
     <Hero />
-    <!-- <p class="blurb"></p> -->
+    <Blurb />
     <!-- <section class="works">
         <h2>Works</h2>
         {#each projects as project}
@@ -32,7 +33,7 @@
     <!-- <section class="about">
         <h2></h2>
         <p></p>
-        <DownloadButton />
+        <FancyButton />
     </section> -->
     <!-- <section class="technologies">
 
