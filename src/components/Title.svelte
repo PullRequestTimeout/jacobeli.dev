@@ -7,7 +7,7 @@
     let element
 </script>
 
-<IntersectionObserver rootMargin={"-20px"} threshold={1} {element} let:intersecting>
+<IntersectionObserver rootMargin={"5px"} threshold={1} {element} let:intersecting>
     <div class="container" bind:this={element}>
         <h2 {id} class="baloo" class:intersect={intersecting}>{innerText}</h2>
     </div>
@@ -17,7 +17,7 @@
     .container {
         display: flex;
         justify-content: center;
-        align-items: center;
+        margin: 8rem 0 2rem 0;
     }
 
     h2 {
