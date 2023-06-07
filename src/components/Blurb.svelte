@@ -19,13 +19,13 @@
         margin-top: 2rem;
         display: grid;
         grid-template-columns: 1rem auto;
-        grid-gap: 2rem;
+        gap: 2rem;
     }
 
     .blurb {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .blurb p {
@@ -38,14 +38,10 @@
             margin-top: 4rem;
             grid-template-columns: 2rem auto;
         }
-    }
 
-    .blurb {
-        gap: 2rem;
-    }
-
-    .blurb p {
-        font-size: 1.2rem;
+        .blurb p {
+            font-size: 1.2rem;
+        }
     }
 
     @media screen and (min-width: 768px) {
