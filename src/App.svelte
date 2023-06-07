@@ -7,6 +7,7 @@
     import ProjectCard from "./components/ProjectCard.svelte"
     import FancyButton from "./components/FancyButton.svelte"
     import Blurb from "./components/Blurb.svelte"
+    import Title from "./components/Title.svelte"
     import { projects } from "./projects"
 </script>
 
