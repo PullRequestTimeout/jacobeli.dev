@@ -50,7 +50,7 @@
 
     @media screen and (min-width: 768px) {
         section {
-            grid-template-columns: 4rem auto;
+            grid-template-columns: 15% auto;
         }
 
         .blurb p {
@@ -59,10 +59,6 @@
     }
 
     @media screen and (min-width: 1024px) {
-        section {
-            grid-template-columns: 10rem auto;
-        }
-
         .blurb p {
             font-size: 1.6rem;
         }
@@ -70,14 +66,13 @@
 
     @media screen and (min-width: 1280px) {
         section {
-            grid-template-columns: 14rem auto;
+            grid-template-columns: 30% auto;
         }
     }
 
     @media screen and (min-width: 1536px) {
         section {
             margin-top: 6rem;
-            grid-template-columns: 30% auto;
         }
 
         .blurb {
