@@ -31,11 +31,11 @@
 <article class="project-card" style="--title-offset: {`${titleOffset}px`}; --video-offset: {`${videoOffset}px`}">
     <div class="project-card__text">
         <div bind:offsetHeight={titleOffset} class="project-card__title">
-            <h2>{title}</h2>
-            <h3>{subtitle}</h3>
-            <p>// {date}</p>
+            <h2 class="mulish">{title}</h2>
+            <h3 class="mulish">{subtitle}</h3>
+            <p class="mulish">// {date}</p>
         </div>
-        <p class="project-card__description">{description}</p>
+        <p class="project-card__description baloo">{description}</p>
     </div>
     <a href={link} class="project-card__media" target="_blank">
         <div>
