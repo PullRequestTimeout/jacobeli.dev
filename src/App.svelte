@@ -4,38 +4,17 @@
     import Overlay from "./components/Overlay.svelte"
     import Navbar from "./components/Navbar.svelte"
     import Hero from "./components/Hero.svelte"
-    import ProjectCard from "./components/ProjectCard.svelte"
-    import FancyButton from "./components/FancyButton.svelte"
     import Blurb from "./components/Blurb.svelte"
-    import Title from "./components/Title.svelte"
-    import { projects } from "./projects"
+    import About from "./components/About.svelte"
+    import Projects from "./components/Projects.svelte"
 </script>
 
 <main>
     <Navbar />
     <Hero />
     <Blurb />
-    <!-- <section class="works">
-        <h2>Works</h2>
-        {#each projects as project}
-            <hr />
-            <ProjectCard
-                title={project.title}
-                subtitle={project.subtitle}
-                date={project.date}
-                description={project.description}
-                video={project.video}
-                image={project.image}
-                link={project.link}
-            />
-        {/each}
-        <hr />
-    </section> -->
-    <!-- <section class="about">
-        <h2></h2>
-        <p></p>
-        <FancyButton />
-    </section> -->
+    <Projects />
+    <About />
     <!-- <section class="technologies">
 
     </section> -->
@@ -50,8 +29,8 @@
         </div>
     </footer> -->
 
-    <Overlay />
-    <MouseEffect />
+    <!-- <Overlay /> -->
+    <!-- <MouseEffect /> -->
 </main>
 
 <style>
