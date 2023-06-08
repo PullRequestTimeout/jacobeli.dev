@@ -1,21 +1,42 @@
 <script>
-    let theme
-    let lightSVG
-    let darkSVG
-    let illuminated
+    export let name
+    let light = true
+    let color = false
 </script>
 
-{#if theme == "dark"}
-    <div class="svg-container">
-        {lightSVG}
-        <div>{illuminated}</div>
-    </div>
-{:else if theme == "light"}
-    <div class="svg-container">
-        {darkSVG}
-        <div class="illuminated">{illuminated}</div>
-    </div>
-{/if}
+<div class="icon">
+    <img src={`./src/assets/tech/${name}.svg`} alt={`Default ${name} icon`} />
+    <img class="color" src={`./src/assets/tech/${name}-color.svg`} alt={`Color ${name} icon`} />
+</div>
 
 <style>
+    .icon {
+        position: relative;
+        width: 6rem;
+        aspect-ratio: 1;
+    }
+
+    .icon img {
+        width: 100%;
+        height: 100%;
+        transition: 0.2s;
+    }
+
+    .icon img.color {
+        position: absolute;
+        top: 0;
+        transform: translateY(-1px) scale(0.985);
+        left: 0;
+        opacity: 0;
+        transition: 0.2s;
+    }
+
+    .icon:hover img {
+        opacity: 0;
+    }
+
+    .icon:hover img.color {
+        opacity: 1;
+        filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.5));
+    }
 </style>
