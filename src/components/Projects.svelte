@@ -1,7 +1,7 @@
 <script>
     import ProjectCard from "./ProjectCard.svelte"
     import Title from "./Title.svelte"
-    import { projects } from "../projects"
+    import { projects } from "../data/projects"
 </script>
 
 <section>
