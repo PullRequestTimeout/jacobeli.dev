@@ -1,6 +1,7 @@
 <script>
     export let innerText
     export let id
+    export let invert = false
 
     import IntersectionObserver from "svelte-intersection-observer"
 
@@ -9,7 +10,7 @@
 
 <IntersectionObserver rootMargin={"5px"} threshold={1} {element} let:intersecting>
     <div class="container" bind:this={element}>
-        <h2 {id} class="baloo" class:intersect={intersecting}>{innerText}</h2>
+        <h2 {id} class="baloo" class:intersect={intersecting} class:invert>{innerText}</h2>
     </div>
 </IntersectionObserver>
 
@@ -17,7 +18,6 @@
     .container {
         display: flex;
         justify-content: center;
-        margin: 8rem 0 2rem 0;
     }
 
     h2 {
@@ -46,5 +46,13 @@
 
     h2.intersect::after {
         width: 100%;
+    }
+
+    h2.invert {
+        color: var(--clr-black);
+    }
+
+    h2.invert::after {
+        background-color: var(--clr-black);
     }
 </style>
