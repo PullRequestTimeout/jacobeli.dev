@@ -19,6 +19,7 @@
 
 <style>
     header {
+        padding: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -123,6 +124,12 @@
         transition: transform 0.4s ease-in-out;
         height: 4rem;
         width: 100vw;
+    }
+
+    @media screen and (min-width: 768px) {
+        header {
+            padding: 2rem;
+        }
     }
 
     @media screen and (min-width: 768px) {
