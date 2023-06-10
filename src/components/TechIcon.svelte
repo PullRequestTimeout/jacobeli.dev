@@ -44,6 +44,7 @@
     @media screen and (min-width: 736px) {
         .icon {
             width: 7vw;
+            margin: 0;
         }
     }
 
