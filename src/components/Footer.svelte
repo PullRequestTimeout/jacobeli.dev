@@ -22,7 +22,7 @@
         padding: 1rem;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        /* gap: 2rem; */
     }
 
     footer > * {
@@ -38,6 +38,7 @@
         display: flex;
         justify-content: space-evenly;
         /* font-size: 9.622vw; */
+        margin: 2rem 0;
         font-size: 8vw;
         text-align: center;
     }
