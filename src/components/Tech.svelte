@@ -3,8 +3,9 @@
 
     import TechIcon from "./TechIcon.svelte"
     import Title from "./Title.svelte"
-    import { tech } from "../data/tech"
     import Ticker from "svelte-ticker"
+
+    const tech = ["nodejs", "figma", "react", "github", "html", "js", "svelte", "davinci", "css", "git", "adobe", "mongodb", "analytics", "express"]
 </script>
 
 <section>
@@ -12,13 +13,13 @@
     <div class="small-screens">
         <Ticker pausing={false}>
             {#each tech as tech}
-                <TechIcon name={tech.name} />
+                <TechIcon name={tech} />
             {/each}
         </Ticker>
     </div>
     <div class="large-screens">
         {#each tech as tech}
-            <TechIcon name={tech.name} />
+            <TechIcon name={tech} />
         {/each}
     </div>
 </section>
