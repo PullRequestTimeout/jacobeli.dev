@@ -10,27 +10,25 @@
     } else if (orientation == "up") {
         rotate = "-30"
     }
-
-    // Opens a new tab if the link is not an id
-    function followLink() {
-        if (url.charAt(0) == "#") {
-            window.location.href = url
-        } else {
-            window.open(url, "_blank")
-        }
-    }
 </script>
 
-<button on:click={followLink} class="button baloo" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></button>
+{#if url.charAt(0) == "#"}
+    <a href={url} class="button baloo" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></a>
+{:else}
+    <a href={url} class="button baloo" target="_blank" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></a>
+{/if}
 
 <style>
     .button {
         position: relative;
-        min-width: 10rem;
+        display: flex;
+        align-items: center;
+        min-width: 8rem;
+        /* min-height: 1.6rem; */
         width: max-content;
         text-align: left;
         z-index: 300;
-        padding: 0.8rem 4rem 0.8rem 1rem;
+        padding: 1rem 4rem 1rem 1rem;
         font-size: 1.2rem;
         border-radius: 2rem;
         border: none;
@@ -46,16 +44,25 @@
 
     .button:hover {
         cursor: pointer;
+    }
+
+    .button:hover,
+    .button:focus,
+    .button:active {
         background-color: var(--clr-gold);
         color: var(--clr-white);
     }
 
-    .button:hover::before {
-        transform: translateY(-50%) rotate(var(--rotate));
+    .button:hover::before,
+    .button:focus::before,
+    .button:active::before {
+        transform: translateY(-45%) rotate(var(--rotate));
         color: var(--clr-white);
     }
 
-    .button:hover::after {
+    .button:hover::after,
+    .button:focus::after,
+    .button:active::after {
         transform: translateY(-50%) scale(10);
     }
 
@@ -66,6 +73,7 @@
         z-index: 303;
         display: flex;
         justify-content: center;
+        transform: translateY(-45%);
         background-color: transparent;
     }
 
@@ -73,14 +81,14 @@
         content: "";
         background-color: var(--clr-gold);
         z-index: 302;
+        transform: translateY(-50%);
     }
 
     .button::after,
     .button::before {
         transition: 0.2s ease;
         position: absolute;
-        transform: translateY(-50%);
-        right: 0.55rem;
+        right: 0.5rem;
         height: 2.5rem;
         top: 50%;
         border-radius: 50%;
