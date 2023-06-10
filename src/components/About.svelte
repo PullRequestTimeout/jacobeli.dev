@@ -1,5 +1,5 @@
 <script>
-    import FancyButton from "./FancyButton.svelte"
+    import FancyButton from "./FancyLink.svelte"
     import Title from "./Title.svelte"
 </script>
 
