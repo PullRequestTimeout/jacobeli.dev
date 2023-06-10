@@ -12,8 +12,9 @@
 <style>
     .icon {
         position: relative;
-        width: 6rem;
+        width: 10vw;
         aspect-ratio: 1;
+        margin: 1rem;
     }
 
     .icon img {
@@ -39,4 +40,12 @@
         opacity: 1;
         filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.5));
     }
+
+    @media screen and (min-width: 736px) {
+        .icon {
+            width: 7vw;
+        }
+    }
+
+    /* 320, 640, 768, 1024, 1280, 1536, 1920 */
 </style>

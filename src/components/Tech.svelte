@@ -1,0 +1,46 @@
+<script>
+    // @ts-nocheck
+
+    import TechIcon from "./TechIcon.svelte"
+    import Title from "./Title.svelte"
+    import { tech } from "../data/tech"
+    import Ticker from "svelte-ticker"
+</script>
+
+<section>
+    <Title innerText="My Technologies" id={false} />
+    <div class="small-screens">
+        <Ticker pausing={false}>
+            {#each tech as tech}
+                <TechIcon name={tech.name} />
+            {/each}
+        </Ticker>
+    </div>
+    <div class="large-screens">
+        {#each tech as tech}
+            <TechIcon name={tech.name} />
+        {/each}
+    </div>
+</section>
+
+<style>
+    .large-screens {
+        display: none;
+    }
+
+    @media screen and (min-width: 736px) {
+        .small-screens {
+            display: none;
+        }
+
+        .large-screens {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(10vw, 1fr));
+            place-items: center;
+            gap: 1rem;
+            margin: 0 auto;
+        }
+    }
+
+    /* 320, 640, 768, 1024, 1280, 1536, 1920 */
+</style>
