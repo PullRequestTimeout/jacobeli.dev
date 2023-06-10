@@ -1,12 +1,10 @@
 <script>
     export let name
-    let light = true
-    let color = false
 </script>
 
 <div class="icon">
-    <img src={`./src/assets/tech/${name}.svg`} alt={`Default ${name} icon`} />
-    <img class="color" src={`./src/assets/tech/${name}-color.svg`} alt={`Color ${name} icon`} />
+    <img src={`/assets/tech/${name}.svg`} alt={`Default ${name} icon`} />
+    <img class="color" src={`/assets/tech/${name}-color.svg`} alt={`Color ${name} icon`} />
 </div>
 
 <style>
@@ -44,7 +42,7 @@
     @media screen and (min-width: 736px) {
         .icon {
             width: 7vw;
-            margin: 0;
+            margin: 1rem 0;
         }
     }
 
