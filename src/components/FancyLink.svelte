@@ -28,7 +28,7 @@
         width: max-content;
         text-align: left;
         z-index: 300;
-        padding: 1rem 4rem 1rem 1rem;
+        padding: 1.1rem 4rem 1rem 1rem;
         font-size: 1.2rem;
         border-radius: 2rem;
         border: none;
