@@ -25,7 +25,8 @@
         text-align: center;
         text-transform: uppercase;
         color: var(--clr-white);
-        margin: 0;
+        /* Could be a variable below? */
+        margin: 2rem 0;
         font-weight: 300;
         font-size: 1.2rem;
         width: fit-content;
@@ -55,4 +56,10 @@
     h2.invert::after {
         background-color: var(--clr-black);
     }
+
+    /*@media screen and (min-width: 640px) {
+        h2 {
+            margin: 4rem 0;
+        }
+    } */
 </style>
