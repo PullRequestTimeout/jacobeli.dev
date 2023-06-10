@@ -45,7 +45,7 @@
         content: "";
         position: absolute;
         z-index: -1;
-        bottom: 50%;
+        bottom: 45%;
         left: 0;
         width: 0;
         height: 2px;
