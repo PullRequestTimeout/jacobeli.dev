@@ -136,6 +136,7 @@ html {
     overflow-x: hidden;
     overscroll-behavior-y: none;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
 
 :root {
@@ -173,4 +174,8 @@ html {
         color: var(--clr-black);
         background-color: var(--clr-white);
     }
+}
+
+section {
+    padding: 2rem 0;
 }
