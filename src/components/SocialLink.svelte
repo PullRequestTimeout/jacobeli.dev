@@ -8,13 +8,13 @@
     function svgIcon(name) {
         switch (name) {
             case "github":
-                return "src/assets/github.svg"
+                return "/assets/github.svg"
             case "linkedin":
-                return "src/assets/linkedin.svg"
+                return "/assets/linkedin.svg"
             case "insta":
-                return "src/assets/insta.svg"
+                return "/assets/insta.svg"
             case "email":
-                return "src/assets/email.svg"
+                return "/assets/email.svg"
         }
     }
 </script>
