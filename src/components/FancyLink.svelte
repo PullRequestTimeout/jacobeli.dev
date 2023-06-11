@@ -2,6 +2,7 @@
     export let innerText
     export let orientation
     export let url = ""
+    export let invert = false
 
     let rotate
 
@@ -13,9 +14,9 @@
 </script>
 
 {#if url.charAt(0) == "#"}
-    <a href={url} class="button baloo" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></a>
+    <a href={url} class="button baloo" class:invert style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></a>
 {:else}
-    <a href={url} class="button baloo" target="_blank" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></a>
+    <a href={url} class="button baloo" class:invert target="_blank" style="--rotate: {`${rotate}deg`}"><span>{innerText}</span></a>
 {/if}
 
 <style>
@@ -93,6 +94,11 @@
         top: 50%;
         border-radius: 50%;
         aspect-ratio: 1;
+    }
+
+    .button.invert {
+        background-color: var(--clr-black);
+        color: var(--clr-white);
     }
 
     @media (prefers-color-scheme: dark) {
