@@ -26,6 +26,7 @@
         <h2 class="mulish">{title}</h2>
         <h3 class="mulish">{subtitle}</h3>
         <p class="mulish">// {date}</p>
+        <hr />
         <p class="baloo">{description}</p>
         <FancyLink url={link} innerText={"View Live"} orientation="up" invert />
     </div>
@@ -42,10 +43,23 @@
         background-color: var(--clr-white);
         transform: translateY(100%);
         transition: 0.5s ease-out;
+        /* line-height: 1.6; */
+    }
+
+    hr {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid var(--clr-black);
+    }
+
+    h2,
+    h3,
+    p {
+        line-height: 1.3;
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     h2,
@@ -57,25 +71,45 @@
         padding: 1rem;
         display: flex;
         flex-direction: column;
-        /* gap: 1rem; */
     }
 
     img {
         width: 100%;
-        margin-top: 5vh;
     }
 
     p.baloo {
-        margin: 1rem 0;
-        line-height: 1.3;
+        margin: 1.5rem 0 2rem 0;
     }
 
     button {
+        cursor: pointer;
         position: absolute;
         top: 0;
         right: 0;
         width: 2rem;
         aspect-ratio: 1;
+        border: none;
+        background-color: transparent;
+        margin: 0.5rem;
+    }
+
+    button::before,
+    button::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 2px;
+        width: 2rem;
+        background-color: #fff;
+    }
+
+    button::before {
+        transform: rotate(45deg);
+    }
+
+    button::after {
+        transform: rotate(-45deg);
     }
 
     article.open {
