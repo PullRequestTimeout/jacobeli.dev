@@ -43,7 +43,7 @@
         background-color: var(--clr-white);
         transform: translateY(100%);
         transition: 0.5s ease-out;
-        /* line-height: 1.6; */
+        overflow-y: scroll;
     }
 
     hr {
@@ -114,5 +114,17 @@
 
     article.open {
         transform: translateY(0%);
+    }
+
+    @media screen and (min-width: 768px) {
+        div {
+            padding: 2rem;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        article {
+            display: none;
+        }
     }
 </style>
