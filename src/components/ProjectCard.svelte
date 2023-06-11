@@ -1,4 +1,7 @@
 <script>
+    import { onMount } from "svelte"
+    import ProjectModal from "./ProjectModal.svelte"
+
     // Props
     export let title
     export let subtitle
@@ -8,7 +11,11 @@
     export let video
     export let link
 
-    import { onMount } from "svelte"
+    let checked = false
+
+    const handleClose = () => {
+        checked = false
+    }
 
     let videoOffset
     let titleOffset
@@ -29,14 +36,18 @@
 </script>
 
 <article class="project-card" style="--title-offset: {`${titleOffset}px`}; --video-offset: {`${videoOffset}px`}">
-    <div class="project-card__text">
-        <div bind:offsetHeight={titleOffset} class="project-card__title">
-            <h2 class="mulish">{title}</h2>
-            <h3 class="mulish">{subtitle}</h3>
-            <p class="mulish">// {date}</p>
+    <input type="checkbox" id={title + "checkbox"} bind:checked />
+    <label for={title + "checkbox"}>
+        <div class="project-card__text">
+            <div bind:offsetHeight={titleOffset} class="project-card__title">
+                <h2 class="mulish">{title}</h2>
+                <h3 class="mulish">{subtitle}</h3>
+                <p class="mulish">// {date}</p>
+            </div>
+            <p class="project-card__description baloo">{description}</p>
         </div>
-        <p class="project-card__description baloo">{description}</p>
-    </div>
+    </label>
+
     <a href={link} class="project-card__media" target="_blank">
         <div>
             <video bind:offsetHeight={videoOffset} bind:this={videoElement} loop muted>
@@ -46,14 +57,25 @@
         </div>
     </a>
 </article>
+<div class="modal">
+    <ProjectModal {title} {subtitle} {date} {description} {image} {link} on:close={handleClose} open={checked} />
+</div>
 
 <style>
+    label {
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
     .project-card {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         overflow: hidden;
-        max-height: var(--title-offset);
+        height: var(--title-offset);
         transition: 0.5s;
         margin: 1rem 0;
     }
@@ -63,9 +85,9 @@
         transition: 0.3s;
     }
 
-    .project-card:hover {
-        max-height: var(--video-offset);
-    }
+    /* .project-card:hover {
+        height: var(--video-offset);
+    } */
 
     .project-card:hover .project-card__description {
         opacity: 1;
@@ -73,7 +95,6 @@
     }
 
     .project-card__text {
-        padding: 1rem;
         line-height: 1.6;
     }
 
@@ -82,17 +103,17 @@
     }
 
     .project-card__title h2 {
-        font-size: 4rem;
+        font-size: 2rem;
     }
 
     .project-card__title h2,
     .project-card__title h3 {
-        font: 100 "Arial", monospace;
         text-transform: uppercase;
     }
 
     .project-card__media {
         position: relative;
+        display: none;
     }
 
     .project-card__media video {
