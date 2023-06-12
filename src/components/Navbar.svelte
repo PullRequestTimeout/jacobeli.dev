@@ -1,18 +1,23 @@
 <script>
     import DarkModeToggle from "./DarkModeToggle.svelte"
+    let checked = false
+
+    const uncheck = () => {
+        checked = false
+    }
 </script>
 
 <header class="mulish">
     <h1>JACOBELI.DEV</h1>
     <DarkModeToggle />
-    <input type="checkbox" id="navCheckbox" />
+    <input type="checkbox" id="navCheckbox" bind:checked />
     <label for="navCheckbox" />
 
     <nav>
         <ul>
-            <li><a href="#work">WORK</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a on:click={uncheck} href="#work">WORK</a></li>
+            <li><a on:click={uncheck} href="#about">ABOUT</a></li>
+            <li><a on:click={uncheck} href="#contact">CONTACT</a></li>
         </ul>
     </nav>
 </header>
