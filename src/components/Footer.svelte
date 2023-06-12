@@ -51,10 +51,6 @@
     }
 
     @media screen and (min-width: 640px) {
-        footer {
-            padding: 2rem;
-        }
-
         p {
             font-size: 1.5rem;
         }
@@ -70,6 +66,10 @@
     }
 
     @media screen and (min-width: 768px) {
+        footer {
+            padding: 2rem;
+        }
+
         h3 {
             font-size: 9.5vw;
         }
