@@ -2,11 +2,16 @@
     import ProjectCard from "./ProjectCard.svelte"
     import Title from "./Title.svelte"
     import { projects } from "../data/projects"
+    let openedCards = Array(projects.length).fill(false)
+
+    function handleCloseCards(index, isOpened) {
+        openedCards = openedCards.map((_, i) => (i === index ? isOpened : false))
+    }
 </script>
 
 <section>
     <Title innerText="Selected Works" id="work" />
-    {#each projects as project}
+    {#each projects as project, index}
         <hr />
         <ProjectCard
             title={project.title}
@@ -16,6 +21,8 @@
             video={project.video}
             image={project.image}
             link={project.link}
+            checked={openedCards[index]}
+            on:closeCards={(event) => handleCloseCards(index, event.detail)}
         />
     {/each}
     <hr />

@@ -1,5 +1,5 @@
 <script>
-    import { onMount } from "svelte"
+    import { onMount, createEventDispatcher } from "svelte"
     import ProjectModal from "./ProjectModal.svelte"
 
     // Props
@@ -10,11 +10,17 @@
     export let image
     export let video
     export let link
-
-    let checked = false
+    export let checked = false
 
     const handleClose = () => {
-        checked = false
+        checked = !checked
+    }
+
+    const dispatch = createEventDispatcher()
+    const closeOtherCards = () => {
+        if (checked) {
+            dispatch("closeCards", checked)
+        }
     }
 
     let videoOffset
@@ -36,7 +42,7 @@
 </script>
 
 <article class="project-card" class:expanded={checked} style="--title-offset: {`${titleOffset}px`}; --video-offset: {`${videoOffset}px`}">
-    <input type="checkbox" id={title + "checkbox"} bind:checked />
+    <input type="checkbox" id={title + "checkbox"} bind:checked on:change={closeOtherCards} />
     <label for={title + "checkbox"}>
         <div class="text">
             <div bind:offsetHeight={titleOffset}>
@@ -58,9 +64,7 @@
         </div>
     </a>
 </article>
-<div class="modal">
-    <ProjectModal {title} {subtitle} {date} {description} {image} {link} on:close={handleClose} open={checked} />
-</div>
+<ProjectModal {title} {subtitle} {date} {description} {image} {link} on:close={handleClose} open={checked} />
 
 <style>
     label {
