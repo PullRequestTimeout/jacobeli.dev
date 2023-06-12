@@ -35,25 +35,26 @@
     })
 </script>
 
-<article class="project-card" style="--title-offset: {`${titleOffset}px`}; --video-offset: {`${videoOffset}px`}">
+<article class="project-card" class:expanded={checked} style="--title-offset: {`${titleOffset}px`}; --video-offset: {`${videoOffset}px`}">
     <input type="checkbox" id={title + "checkbox"} bind:checked />
     <label for={title + "checkbox"}>
-        <div class="project-card__text">
-            <div bind:offsetHeight={titleOffset} class="project-card__title">
+        <div class="text">
+            <div bind:offsetHeight={titleOffset}>
                 <h2 class="mulish">{title}</h2>
                 <h3 class="mulish">{subtitle}</h3>
                 <p class="mulish">// {date}</p>
             </div>
-            <p class="project-card__description baloo">{description}</p>
+            <p class="description baloo">{description}</p>
         </div>
+        <div class="arrow" />
     </label>
 
-    <a href={link} class="project-card__media" target="_blank">
+    <a href={link} class="media" target="_blank">
         <div>
-            <video bind:offsetHeight={videoOffset} bind:this={videoElement} loop muted>
+            <video bind:offsetHeight={videoOffset} bind:this={videoElement} class:show={checked} loop muted>
                 <source src={video} type="video/mp4" />
             </video>
-            <img class="project-card__img" src={image} alt="Screenshot of a project" />
+            <img src={image} alt="Screenshot of a project" />
         </div>
     </a>
 </article>
@@ -70,7 +71,8 @@
         display: none;
     }
 
-    .project-card {
+    article {
+        position: relative;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
@@ -80,43 +82,27 @@
         margin: 1rem 0;
     }
 
-    .project-card__description {
-        opacity: 0;
-        transition: 0.3s;
-    }
-
-    /* .project-card:hover {
-        height: var(--video-offset);
-    } */
-
-    .project-card:hover .project-card__description {
-        opacity: 1;
-        transition-delay: 0.4s;
-    }
-
-    .project-card__text {
+    h3,
+    p {
         line-height: 1.6;
     }
 
-    .project-card__title {
-        padding-bottom: 1rem;
-    }
-
-    .project-card__title h2 {
+    h2 {
         font-size: 2rem;
+        margin-bottom: 0.5rem;
     }
 
-    .project-card__title h2,
-    .project-card__title h3 {
+    h2,
+    h3 {
         text-transform: uppercase;
     }
 
-    .project-card__media {
+    .media {
         position: relative;
         display: none;
     }
 
-    .project-card__media video {
+    video {
         object-fit: cover;
         width: 100%;
         aspect-ratio: 16/9;
@@ -124,16 +110,95 @@
         transition: 0.5s ease;
     }
 
-    .project-card__media video:hover {
+    video.show:hover {
         opacity: 1;
         transition-delay: 0.4s;
     }
 
-    .project-card__img {
+    img {
         position: absolute;
         z-index: -1;
         top: 0;
         left: 0;
         width: 100%;
     }
+
+    .arrow {
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0;
+    }
+
+    .arrow::after {
+        content: "→";
+        display: flex;
+        justify-content: end;
+        position: relative;
+        font-size: 1.2rem;
+        margin: 0;
+        font-family: sans-serif;
+        color: var(--clr-white);
+        transform: rotate(45deg) translateX(0.25rem);
+    }
+
+    @media screen and (min-width: 640px) {
+        h2 {
+            font-size: 3rem;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .arrow {
+            display: none;
+        }
+
+        .text {
+            padding-right: 1rem;
+        }
+
+        article {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .media {
+            display: block;
+        }
+
+        article.expanded {
+            height: var(--video-offset);
+        }
+
+        .description {
+            opacity: 0;
+            transition: 0.3s;
+            margin-top: 1rem;
+        }
+
+        article.expanded .description {
+            opacity: 1;
+            transition-delay: 0.4s;
+        }
+
+        img {
+            max-height: calc(var(--video-offset) - 1px);
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        h2 {
+            font-size: 3.5rem;
+        }
+
+        p.description {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media screen and (min-width: 1536px) {
+        h2 {
+            font-size: 4rem;
+        }
+    }
+
+    /* Breakpoints 320, 640, 768, 1024, 1280, 1536, 1920 */
 </style>
