@@ -1,5 +1,5 @@
 <script>
-    import DarkModeToggle from "./DarkModeToggle.svelte"
+    // import DarkModeToggle from "./DarkModeToggle.svelte"
     let checked = false
 
     const uncheck = () => {
@@ -9,7 +9,7 @@
 
 <header class="mulish">
     <h1>JACOBELI.DEV</h1>
-    <DarkModeToggle />
+    <!-- <DarkModeToggle /> -->
     <input type="checkbox" id="navCheckbox" bind:checked />
     <label for="navCheckbox" />
 
@@ -159,7 +159,7 @@
         }
     }
 
-    @media (prefers-color-scheme: light) {
+    /* @media (prefers-color-scheme: light) {
         a {
             color: var(--clr-black);
         }
@@ -191,5 +191,5 @@
                 background-color: transparent;
             }
         }
-    }
+    } */
 </style>

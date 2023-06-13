@@ -25,7 +25,6 @@
         display: flex;
         align-items: center;
         min-width: 8rem;
-        /* min-height: 1.6rem; */
         width: max-content;
         text-align: left;
         z-index: 300;
@@ -33,7 +32,8 @@
         font-size: 1.2rem;
         border-radius: 2rem;
         border: none;
-        background-color: var(--clr-black);
+        background-color: var(--clr-white);
+        color: var(--clr-black);
         transition: 0.2s ease;
         overflow: hidden;
     }
@@ -101,7 +101,7 @@
         color: var(--clr-white);
     }
 
-    @media (prefers-color-scheme: dark) {
+    /* @media (prefers-color-scheme: dark) {
         .button {
             background-color: var(--clr-white);
             color: var(--clr-black);
@@ -110,5 +110,5 @@
         .button::before {
             color: var(--clr-white);
         }
-    }
+    } */
 </style>

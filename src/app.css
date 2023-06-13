@@ -155,7 +155,7 @@ html {
     --clr-black: #171717;
     --clr-white: #f7f7f7;
 
-    color-scheme: light dark;
+    /* color-scheme: light dark; */
     color: var(--clr-white);
     background-color: var(--clr-black);
 
@@ -179,13 +179,12 @@ html {
     font-family: "Baloo 2", sans-serif;
 }
 
-@media (prefers-color-scheme: light) {
-    /* light theme style changes */
+/* @media (prefers-color-scheme: light) {
     :root {
         color: var(--clr-black);
         background-color: var(--clr-white);
     }
-}
+} */
 
 section {
     padding: 1rem 0;
