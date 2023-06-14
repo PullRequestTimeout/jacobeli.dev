@@ -3,14 +3,14 @@
         <h3 class="baloo">Jacob Druery</h3>
         <h2 class="mulish">Creative Developer</h2>
     </div>
-    <p class="subtitle baloo">Crafting bespoke web experiences</p>
+    <p class="subtitle baloo">Crafting <em>bespoke</em> web experiences</p>
 </section>
 
 <style>
     section {
-        margin-top: 30vh;
+        margin-top: 55vh;
         display: grid;
-        gap: 2rem;
+        gap: 1rem;
         grid-template-columns: fit-content(8ch);
     }
 
@@ -19,26 +19,15 @@
         flex-direction: column;
         gap: 0.25rem;
     }
+
     h2,
     h3 {
         text-transform: uppercase;
-        font-weight: 300;
     }
 
     h2 {
         font-size: 3rem;
-        /* transform: translateX(-4px); */
-        animation: slide-in 0.5s ease-in-out;
     }
-
-    /* @keyframes slide-in {
-        from {
-            transform: translateY(100%);
-        }
-        to {
-            transform: translateY(0%);
-        }
-    } */
 
     @media screen and (min-width: 360px) {
         h2 {
@@ -61,6 +50,7 @@
 
         h2 {
             font-size: 5rem;
+            transform: translate(-0.4rem, 0.5rem);
         }
 
         .subtitle {
@@ -70,27 +60,34 @@
 
     @media screen and (min-width: 1024px) {
         section {
-            margin-top: 50vh;
+            margin-top: 35vh;
         }
 
         h2 {
             font-size: 7rem;
+            transform: translate(-0.5rem, 0.7rem);
         }
     }
 
     @media screen and (min-width: 1280px) {
         section {
-            margin-top: 40vh;
+            margin-top: 25vh;
         }
 
         h2 {
             font-size: 9rem;
+            transform: translate(-0.8rem, 0.8rem);
+        }
+
+        p,
+        h3 {
+            font-size: 1.2rem;
         }
     }
 
     @media screen and (min-width: 1536px) {
         section {
-            margin-top: 35vh;
+            margin-top: 20vh;
         }
 
         h2 {
