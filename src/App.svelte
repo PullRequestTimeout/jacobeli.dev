@@ -25,8 +25,6 @@
 <MouseEffect />
 
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Mulish:wght@200;400&display=swap");
-
     main {
         padding: 1rem;
     }
