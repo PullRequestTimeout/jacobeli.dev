@@ -9,6 +9,14 @@
     let resolutionUniformLocation
     let timeUniformLocation
 
+    let grain
+    const width = window.innerWidth
+    if (width < 768) {
+        grain = 6
+    } else {
+        grain = 4
+    }
+
     onMount(() => {
         // Get the WebGL context
         gl = canvas.getContext("webgl")
@@ -36,7 +44,7 @@
 
         vec4 color = texture2D(iChannel0, uv);
 
-        float strength = 3.0;  // Adjust the grain size (smaller value for smaller grain)
+        float strength = ${grain}.0;  // Adjust the grain size (smaller value for smaller grain)
 
         float x = (uv.x + 4.0) * (uv.y + 4.0) * (iTime * 5.0);  // Adjust the rate of change (larger value for slower change)
         vec4 grain = vec4(mod((mod(x, 13.0) + 1.0) * (mod(x, 123.0) + 1.0), 0.01) - 0.005) * strength;
