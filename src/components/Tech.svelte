@@ -25,6 +25,10 @@
 </section>
 
 <style>
+    section {
+        overflow: hidden;
+    }
+
     .large-screens {
         display: none;
     }

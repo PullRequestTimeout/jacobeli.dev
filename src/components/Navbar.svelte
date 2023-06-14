@@ -28,6 +28,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        overflow: hidden;
+        position: relative;
     }
 
     h1 {
@@ -128,7 +130,7 @@
         transform: translateX(100%);
         transition: transform 0.4s ease-in-out;
         height: 4rem;
-        width: 100vw;
+        max-width: 100%;
     }
 
     @media screen and (min-width: 768px) {
