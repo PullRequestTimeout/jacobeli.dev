@@ -27,3 +27,11 @@
     {/each}
     <hr />
 </section>
+
+<style>
+    hr {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid var(--clr-white);
+    }
+</style>
