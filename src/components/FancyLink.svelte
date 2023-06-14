@@ -48,6 +48,43 @@
         cursor: pointer;
     }
 
+    .button::before {
+        content: "→";
+        font-size: 1.8rem;
+        line-height: 1;
+        height: 100%;
+        font-family: sans-serif;
+        z-index: 303;
+        display: flex;
+        padding-top: 0.2rem;
+        place-content: center;
+        background-color: transparent;
+        color: var(--clr-white);
+    }
+
+    .button::after {
+        content: "";
+        background-color: var(--clr-gold);
+        z-index: 302;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+
+    .button::after,
+    .button::before {
+        transition: 0.2s ease;
+        position: absolute;
+        right: 0.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        aspect-ratio: 1;
+    }
+
+    .button.invert {
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+    }
+
     .button:hover,
     .button:focus,
     .button:active {
@@ -58,7 +95,7 @@
     .button:hover::before,
     .button:focus::before,
     .button:active::before {
-        transform: translateY(-50%) rotate(var(--rotate));
+        transform: rotate(var(--rotate));
         color: var(--clr-white);
     }
 
@@ -66,45 +103,6 @@
     .button:focus::after,
     .button:active::after {
         transform: translateY(-50%) scale(10);
-    }
-
-    .button::before {
-        content: "→";
-        font-size: 1.8rem;
-        position: relative;
-        line-height: 1;
-        height: 100%;
-        font-family: sans-serif;
-        z-index: 303;
-        display: flex;
-        padding-top: 0.2rem;
-        place-content: center;
-        transform: translateY(-50%);
-        background-color: transparent;
-        color: var(--clr-white);
-    }
-
-    .button::after {
-        content: "";
-        background-color: var(--clr-gold);
-        z-index: 302;
-        transform: translateY(-50%);
-    }
-
-    .button::after,
-    .button::before {
-        transition: 0.2s ease;
-        position: absolute;
-        right: 0.5rem;
-        height: 2.5rem;
-        top: 50%;
-        border-radius: 50%;
-        aspect-ratio: 1;
-    }
-
-    .button.invert {
-        background-color: var(--clr-black);
-        color: var(--clr-white);
     }
 
     /* @media (prefers-color-scheme: dark) {
