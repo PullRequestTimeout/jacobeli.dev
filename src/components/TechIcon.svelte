@@ -10,7 +10,7 @@
 <style>
     .icon {
         position: relative;
-        width: 10vw;
+        width: 20vw;
         aspect-ratio: 1;
         margin: 1rem;
     }
@@ -37,6 +37,12 @@
     .icon:hover img.color {
         opacity: 1;
         filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.5));
+    }
+
+    @media screen and (min-width: 640px) {
+        .icon {
+            width: 10vw;
+        }
     }
 
     @media screen and (min-width: 736px) {
