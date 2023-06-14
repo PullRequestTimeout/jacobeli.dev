@@ -30,15 +30,6 @@
         transition: 0.2s;
     }
 
-    .icon:hover img {
-        opacity: 0;
-    }
-
-    .icon:hover img.color {
-        opacity: 1;
-        filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.5));
-    }
-
     @media screen and (min-width: 640px) {
         .icon {
             width: 10vw;
@@ -49,6 +40,15 @@
         .icon {
             width: 7vw;
             margin: 1rem 0;
+        }
+
+        .icon:hover img {
+            opacity: 0;
+        }
+
+        .icon:hover img.color {
+            opacity: 1;
+            filter: drop-shadow(0 0 0.2rem rgba(255, 255, 255, 0.5));
         }
     }
 
