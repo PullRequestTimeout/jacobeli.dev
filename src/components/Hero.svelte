@@ -1,14 +1,21 @@
 <section>
-    <div class="title">
-        <h3 class="baloo">Jacob Druery</h3>
-        <h2 class="mulish">Creative Developer</h2>
+    <div class="container">
+        <div class="title">
+            <h3 class="baloo">Jacob Druery</h3>
+            <h2 class="mulish">Creative Developer</h2>
+        </div>
+        <p class="subtitle baloo">Crafting <em>bespoke</em> web experiences</p>
     </div>
-    <p class="subtitle baloo">Crafting <em>bespoke</em> web experiences</p>
 </section>
 
 <style>
     section {
-        margin-top: 55vh;
+        height: calc(100vh - 8rem);
+        display: flex;
+        align-items: end;
+    }
+
+    .container {
         display: grid;
         gap: 1rem;
         grid-template-columns: fit-content(8ch);
@@ -43,8 +50,11 @@
 
     @media screen and (min-width: 768px) {
         section {
+            height: calc(100vh - 14rem);
+        }
+
+        .container {
             grid-template-columns: fit-content(8ch) auto;
-            margin-top: 40vh;
             gap: 1rem;
         }
 
@@ -59,10 +69,6 @@
     }
 
     @media screen and (min-width: 1024px) {
-        section {
-            margin-top: 35vh;
-        }
-
         h2 {
             font-size: 7rem;
             transform: translate(-0.5rem, 0.7rem);
@@ -70,10 +76,6 @@
     }
 
     @media screen and (min-width: 1280px) {
-        section {
-            margin-top: 25vh;
-        }
-
         h2 {
             font-size: 9rem;
             transform: translate(-0.8rem, 0.8rem);
@@ -86,10 +88,6 @@
     }
 
     @media screen and (min-width: 1536px) {
-        section {
-            margin-top: 20vh;
-        }
-
         h2 {
             font-size: 11rem;
         }
