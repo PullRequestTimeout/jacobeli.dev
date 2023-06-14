@@ -21,8 +21,8 @@
 </main>
 <Footer />
 
-<!-- <Overlay /> -->
-<!-- <MouseEffect /> -->
+<Overlay />
+<MouseEffect />
 
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Mulish:wght@200;400&display=swap");
@@ -31,7 +31,6 @@
         padding: 1rem;
     }
 
-    /* Follow this up with all dimensions */
     @media screen and (min-width: 768px) {
         main {
             padding: 2rem;
