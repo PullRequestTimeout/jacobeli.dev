@@ -21,6 +21,7 @@
 
 <style>
     .button {
+        user-select: none;
         position: relative;
         display: flex;
         align-items: center;
@@ -57,7 +58,7 @@
     .button:hover::before,
     .button:focus::before,
     .button:active::before {
-        transform: translateY(-45%) rotate(var(--rotate));
+        transform: translateY(-50%) rotate(var(--rotate));
         color: var(--clr-white);
     }
 
@@ -70,11 +71,15 @@
     .button::before {
         content: "→";
         font-size: 1.8rem;
+        position: relative;
+        line-height: 1;
+        height: 100%;
         font-family: sans-serif;
         z-index: 303;
         display: flex;
-        justify-content: center;
-        transform: translateY(-45%);
+        padding-top: 0.2rem;
+        place-content: center;
+        transform: translateY(-50%);
         background-color: transparent;
         color: var(--clr-white);
     }
