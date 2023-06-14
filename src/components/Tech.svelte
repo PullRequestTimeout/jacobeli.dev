@@ -27,6 +27,8 @@
 <style>
     section {
         overflow: hidden;
+        width: 100vw;
+        transform: translateX(-1rem);
     }
 
     .large-screens {
@@ -34,6 +36,11 @@
     }
 
     @media screen and (min-width: 736px) {
+        section {
+            width: unset;
+            transform: unset;
+        }
+
         .small-screens {
             display: none;
         }
