@@ -76,6 +76,7 @@
         justify-content: center;
         transform: translateY(-45%);
         background-color: transparent;
+        color: var(--clr-white);
     }
 
     .button::after {
