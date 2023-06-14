@@ -48,10 +48,10 @@
         top: 0;
         left: 0;
         height: 100vh;
-        width: 100%;
+        width: 100vw;
         position: fixed;
         z-index: -50;
-        backdrop-filter: blur(10rem);
+        backdrop-filter: blur(5rem);
     }
 
     @keyframes blob {
