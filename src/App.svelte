@@ -9,6 +9,7 @@
     import Projects from "./components/Projects.svelte"
     import Footer from "./components/Footer.svelte"
     import Tech from "./components/Tech.svelte"
+    import Loading from "./components/Loading.svelte"
 </script>
 
 <Navbar />
@@ -23,6 +24,7 @@
 
 <Overlay />
 <MouseEffect />
+<Loading />
 
 <style>
     main {
