@@ -33,6 +33,7 @@
     }
 
     .mouse-effect {
+        display: none;
         top: 50%;
         left: 50%;
         position: absolute;
@@ -71,9 +72,9 @@
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 1024px) {
         .mouse-effect {
-            display: none;
+            display: unset;
         }
     }
 </style>
