@@ -130,7 +130,7 @@
         transform: translateX(100%);
         transition: transform 0.4s ease-in-out;
         height: 4rem;
-        max-width: 100%;
+        width: 100vw;
     }
 
     @media screen and (min-width: 768px) {
