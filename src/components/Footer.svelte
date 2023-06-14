@@ -22,7 +22,6 @@
         padding: 1rem;
         display: flex;
         flex-direction: column;
-        /* gap: 2rem; */
     }
 
     footer > * {
@@ -36,18 +35,23 @@
 
     h3 {
         display: flex;
-        justify-content: space-evenly;
-        /* font-size: 9.622vw; */
-        margin: 2rem 0;
-        font-size: 8vw;
+        justify-content: space-between;
+        margin: 2rem -0.25rem;
+        font-size: 9vw;
         text-align: center;
     }
 
     .socials {
-        padding-left: 0.5rem;
         display: flex;
         justify-content: space-between;
         gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (min-width: 450px) {
+        h3 {
+            font-size: 9.5vw;
+        }
     }
 
     @media screen and (min-width: 640px) {
@@ -56,7 +60,7 @@
         }
 
         h3 {
-            font-size: 9vw;
+            font-size: 9.75vw;
             text-align: justify;
         }
 
@@ -72,13 +76,6 @@
 
         h3 {
             font-size: 9.5vw;
-        }
-    }
-
-    @media screen and (min-width: 1280px) {
-        h3 {
-            display: flex;
-            justify-content: space-between;
         }
     }
 </style>
