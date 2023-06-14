@@ -16,7 +16,6 @@
 
 <style>
     section {
-        margin-top: 2rem;
         display: grid;
         grid-template-columns: 1rem auto;
         gap: 2rem;
@@ -35,7 +34,6 @@
 
     @media screen and (min-width: 640px) {
         section {
-            margin-top: 4rem;
             grid-template-columns: 2rem auto;
         }
 
@@ -54,12 +52,6 @@
         }
     }
 
-    @media screen and (min-width: 1024px) {
-        .blurb p {
-            font-size: 1.6rem;
-        }
-    }
-
     @media screen and (min-width: 1280px) {
         section {
             grid-template-columns: 30% auto;
@@ -67,10 +59,6 @@
     }
 
     @media screen and (min-width: 1536px) {
-        section {
-            margin-top: 6rem;
-        }
-
         .blurb {
             gap: 3rem;
         }
