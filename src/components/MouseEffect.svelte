@@ -18,13 +18,13 @@
 
 <div class="container">
     <div on:mousemove={handlePointerMove} bind:this={blob} class="mouse-effect" />
+    <div class="blur" />
 </div>
-<div class="blur" />
 
 <style>
     .container {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         position: fixed;
         z-index: -99;
         top: 0;
@@ -42,13 +42,16 @@
         border-radius: 50%;
         animation: blob 30s infinite;
         z-index: -100;
+        /* Man this is probably really computationally expensive to have a filter and backdrop filter, but bd-filter is buggy as hell */
+        filter: blur(4rem);
     }
 
     .blur {
+        display: none;
         top: 0;
         left: 0;
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         position: fixed;
         z-index: -50;
         backdrop-filter: blur(5rem);
@@ -74,6 +77,10 @@
 
     @media screen and (min-width: 1024px) {
         .mouse-effect {
+            display: unset;
+        }
+
+        .blur {
             display: unset;
         }
     }
