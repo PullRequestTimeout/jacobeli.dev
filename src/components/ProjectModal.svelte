@@ -42,9 +42,11 @@
         bottom: 0;
         left: 0;
         background-color: var(--clr-white);
-        transform: translateY(100%);
-        transition: 0.5s ease-out;
+        transform: translateY(20%);
+        opacity: 0;
+        transition: 0.4s ease-out;
         overflow-y: scroll;
+        pointer-events: none;
     }
 
     .blur {
@@ -127,9 +129,11 @@
 
     article.open {
         transform: translateY(0%);
+        opacity: 1;
+        pointer-events: all;
     }
 
-    div.open {
+    .blur.open {
         backdrop-filter: blur(1rem);
     }
 
