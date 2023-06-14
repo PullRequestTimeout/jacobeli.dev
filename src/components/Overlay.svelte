@@ -10,16 +10,16 @@
     let timeUniformLocation
 
     let grain
-    const width = window.innerWidth
+    let width = window.innerWidth
     if (width < 768) {
-        grain = 6
+        grain = 10
     } else {
-        grain = 4
+        grain = 3
     }
 
     onMount(() => {
         // Get the WebGL context
-        gl = canvas.getContext("webgl")
+        gl = canvas.getContext("webgl", { antialias: false })
 
         // Create the vertex shader
         const vertexShaderSource = `
