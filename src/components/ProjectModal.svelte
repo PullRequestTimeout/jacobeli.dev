@@ -19,6 +19,7 @@
     }
 </script>
 
+<div class="blur" class:open />
 <article class:open>
     <button on:click={handleClose} />
     <img src={image} alt={"Mockup of" + title} />
@@ -44,6 +45,18 @@
         transform: translateY(100%);
         transition: 0.5s ease-out;
         overflow-y: scroll;
+    }
+
+    .blur {
+        pointer-events: none;
+        position: fixed;
+        z-index: 499;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(0);
+        transition: 0.5s ease-in-out;
     }
 
     hr {
@@ -116,6 +129,10 @@
         transform: translateY(0%);
     }
 
+    div.open {
+        backdrop-filter: blur(1rem);
+    }
+
     @media screen and (min-width: 768px) {
         div {
             padding: 2rem;
@@ -123,7 +140,8 @@
     }
 
     @media screen and (min-width: 1024px) {
-        article {
+        article,
+        .blur {
             display: none;
         }
     }
