@@ -42,6 +42,7 @@
     .button span {
         position: relative;
         z-index: 304;
+        user-select: none;
     }
 
     .button:hover {
