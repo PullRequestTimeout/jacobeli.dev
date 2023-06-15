@@ -49,17 +49,11 @@
     }
 
     .button::before {
-        content: "→";
-        font-size: 1.8rem;
-        line-height: 1;
-        height: 100%;
-        font-family: sans-serif;
+        content: url(/assets/arrow.svg);
         z-index: 303;
-        display: flex;
-        padding-top: 0.2rem;
-        place-content: center;
-        background-color: transparent;
-        color: var(--clr-white);
+        filter: invert(1);
+        right: 0.65rem;
+        top: 17%;
     }
 
     .button::after {
@@ -68,16 +62,16 @@
         z-index: 302;
         transform: translateY(-50%);
         top: 50%;
+        right: 0.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        aspect-ratio: 1;
     }
 
     .button::after,
     .button::before {
         transition: 0.2s ease;
         position: absolute;
-        right: 0.5rem;
-        height: 2.5rem;
-        border-radius: 50%;
-        aspect-ratio: 1;
     }
 
     .button.invert {
