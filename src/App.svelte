@@ -22,7 +22,7 @@
 </main>
 <Footer />
 
-<Overlay />
+<!-- <Overlay /> -->
 <MouseEffect />
 <Loading />
 
