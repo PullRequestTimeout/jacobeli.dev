@@ -36,7 +36,7 @@ export const projects = [
         description:
             "That's right, this website! jacobeli.dev is my personal portfolio built with Svelte. Web Design in collaboration with Sean Makura.",
         image: "/assets/jacobeli.jpg",
-        video: "/assets/gooeystartpagevideo.mp4", //Dummy data
+        video: "/assets/jacobelivideo.mp4",
         link: "https://jacobeli.dev",
     },
 ]
