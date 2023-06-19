@@ -75,7 +75,7 @@
         }
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
         .mouse-effect {
             display: unset;
         }
