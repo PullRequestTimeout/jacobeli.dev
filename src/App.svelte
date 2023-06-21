@@ -14,6 +14,9 @@
     // Remove history state and load website with scroll at top
     window.history.replaceState({}, document.title, "/")
     setTimeout(() => window.scrollTo(0, 0), 100)
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual"
+    }
 </script>
 
 <Navbar />
