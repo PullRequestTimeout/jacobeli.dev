@@ -10,6 +10,10 @@
     import Footer from "./components/Footer.svelte"
     import Tech from "./components/Tech.svelte"
     import Loading from "./components/Loading.svelte"
+
+    // Remove history state and load website with scroll at top
+    window.history.replaceState({}, document.title, "/")
+    setTimeout(() => window.scrollTo(0, 0), 100)
 </script>
 
 <Navbar />
