@@ -11,7 +11,7 @@
 <style>
     section {
         height: calc(100vh - 8rem);
-        display: flex;
+        display: grid;
         align-items: end;
     }
 
