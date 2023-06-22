@@ -71,6 +71,7 @@
 
 <style>
     article {
+        touch-action: none;
         position: fixed;
         color: var(--clr-black);
         z-index: 500;
