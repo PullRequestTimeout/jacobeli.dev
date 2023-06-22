@@ -70,7 +70,7 @@
         color: var(--clr-black);
         z-index: 500;
         height: 100vh;
-        bottom: 0;
+        top: 0;
         left: 0;
         background-color: var(--clr-white);
         transform: translateY(20%);
