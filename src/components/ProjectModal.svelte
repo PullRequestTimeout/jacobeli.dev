@@ -163,7 +163,7 @@
     }
 
     article.open {
-        transform: translateY(0%);
+        transform: translateY(-0.5%);
         opacity: 1;
         pointer-events: all;
     }
