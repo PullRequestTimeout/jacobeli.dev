@@ -18,10 +18,10 @@
         dispatch("close")
     }
 
-    let touchstartX = 0
-    let touchstartY = 0
-    let touchendX = 0
-    let touchendY = 0
+    let touchStartX = 0
+    let touchStartY = 0
+    let touchEndX = 0
+    let touchEndY = 0
 
     let gestureZone
 
@@ -29,8 +29,8 @@
         gestureZone.addEventListener(
             "touchstart",
             function (event) {
-                touchstartX = event.changedTouches[0].screenX
-                touchstartY = event.changedTouches[0].screenY
+                touchStartX = event.changedTouches[0].screenX
+                touchStartY = event.changedTouches[0].screenY
             },
             false
         )
@@ -38,8 +38,8 @@
         gestureZone.addEventListener(
             "touchend",
             function (event) {
-                touchendX = event.changedTouches[0].screenX
-                touchendY = event.changedTouches[0].screenY
+                touchEndX = event.changedTouches[0].screenX
+                touchEndY = event.changedTouches[0].screenY
                 handleGesture()
             },
             false
@@ -47,29 +47,9 @@
     })
 
     function handleGesture() {
-        if (touchendX < touchstartX) {
-            console.log("Swiped left")
-            alert("Swiped left")
-        }
-
-        if (touchendX > touchstartX) {
-            console.log("Swiped right")
-            alert("Swiped right")
-        }
-
-        if (touchendY < touchstartY) {
-            console.log("Swiped up")
-            alert("Swiped up")
-        }
-
-        if (touchendY > touchstartY) {
+        if (touchEndY > touchStartY && touchEndY - touchStartY > 150) {
             console.log("Swiped down")
             alert("Swiped down")
-        }
-
-        if (touchendY === touchstartY) {
-            console.log("Tap")
-            alert("Tap")
         }
     }
 </script>
