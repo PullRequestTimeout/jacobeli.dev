@@ -133,6 +133,7 @@ a {
 /* Global styles */
 
 html {
+    height: 100%;
     overflow-x: hidden;
     overscroll-behavior-y: none;
     scroll-behavior: smooth;

@@ -1,5 +1,5 @@
 <script>
-    import { createEventDispatcher } from "svelte"
+    import { createEventDispatcher, onMount } from "svelte"
     import FancyLink from "./FancyLink.svelte"
 
     export let title
@@ -17,10 +17,65 @@
         open = false
         dispatch("close")
     }
+
+    let touchstartX = 0
+    let touchstartY = 0
+    let touchendX = 0
+    let touchendY = 0
+
+    let gestureZone
+
+    onMount(() => {
+        gestureZone.addEventListener(
+            "touchstart",
+            function (event) {
+                touchstartX = event.changedTouches[0].screenX
+                touchstartY = event.changedTouches[0].screenY
+            },
+            false
+        )
+
+        gestureZone.addEventListener(
+            "touchend",
+            function (event) {
+                touchendX = event.changedTouches[0].screenX
+                touchendY = event.changedTouches[0].screenY
+                handleGesture()
+            },
+            false
+        )
+    })
+
+    function handleGesture() {
+        if (touchendX < touchstartX) {
+            console.log("Swiped left")
+            alert("Swiped left")
+        }
+
+        if (touchendX > touchstartX) {
+            console.log("Swiped right")
+            alert("Swiped right")
+        }
+
+        if (touchendY < touchstartY) {
+            console.log("Swiped up")
+            alert("Swiped up")
+        }
+
+        if (touchendY > touchstartY) {
+            console.log("Swiped down")
+            alert("Swiped down")
+        }
+
+        if (touchendY === touchstartY) {
+            console.log("Tap")
+            alert("Tap")
+        }
+    }
 </script>
 
 <div class="blur" class:open />
-<article class:open>
+<article class:open bind:this={gestureZone}>
     <button on:click={handleClose} />
     <img src={image} alt={"Mockup of" + title} />
     <div>
