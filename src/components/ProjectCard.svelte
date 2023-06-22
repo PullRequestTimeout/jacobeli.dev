@@ -29,6 +29,7 @@
 
     onMount(() => {
         videoElement.addEventListener("mouseenter", () => {
+            videoElement.currentTime = 0
             // Delays playing video until CSS animation is finished
             setTimeout(() => videoElement.play(), 500)
         })
@@ -52,7 +53,6 @@
             </div>
             <p class="description baloo">{description}</p>
         </div>
-        <div class="arrow" />
     </label>
 
     <a href={link} class="media" target="_blank">
@@ -63,6 +63,7 @@
             <img src={image} alt="Screenshot of a project" />
         </div>
     </a>
+    <div class="arrow" class:show={checked} />
 </article>
 <ProjectModal {title} {subtitle} {date} {description} {image} {link} on:close={handleClose} open={checked} />
 
@@ -129,19 +130,15 @@
 
     .arrow {
         position: absolute;
-        bottom: 0.5rem;
+        bottom: 0;
         right: 0;
     }
 
     .arrow::after {
-        content: "→";
+        content: url(/assets/arrow.svg);
+        filter: invert(1);
         display: flex;
-        justify-content: end;
-        position: relative;
-        font-size: 1.2rem;
-        margin: 0;
-        font-family: sans-serif;
-        color: var(--clr-white);
+        place-content: center;
         transform: rotate(45deg) translateX(0.25rem);
     }
 
@@ -153,7 +150,23 @@
 
     @media screen and (min-width: 1024px) {
         .arrow {
-            display: none;
+            opacity: 0;
+            transform: rotate(-90deg);
+            bottom: 1rem;
+            right: 1rem;
+            transition: 0.2s ease;
+            pointer-events: none;
+        }
+
+        .arrow::after {
+            padding: 0.5rem;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+        }
+
+        .arrow.show {
+            opacity: 1;
+            transition-delay: 0.4s;
         }
 
         .text {
@@ -195,6 +208,10 @@
 
         p.description {
             font-size: 1.2rem;
+        }
+
+        .arrow::after {
+            padding: 1rem;
         }
     }
 
