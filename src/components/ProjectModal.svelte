@@ -47,9 +47,10 @@
     })
 
     function handleGesture() {
-        if (touchEndY > touchStartY) {
-            console.log("Swiped down")
-            alert("Swiped down:" + touchEndY + " " + touchStartY)
+        if (touchEndY > touchStartY && touchEndY - touchStartY > 20) {
+            // console.log("Swiped down")
+            // alert("Swiped down:" + touchEndY + " " + touchStartY)
+            handleClose()
         }
     }
 </script>
