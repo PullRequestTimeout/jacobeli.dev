@@ -5,13 +5,28 @@
     import Title from "./Title.svelte"
     import Ticker from "svelte-ticker"
 
-    const tech = ["nodejs", "figma", "react", "github", "html", "js", "svelte", "davinci", "css", "git", "adobe", "mongodb", "analytics", "express"]
+    const tech = [
+        "nodejs",
+        "figma",
+        "react",
+        "github",
+        "html",
+        "javascript",
+        "svelte",
+        "davinci",
+        "css",
+        "git",
+        "adobe",
+        "mongodb",
+        "analytics",
+        "express",
+    ]
 </script>
 
 <section>
     <Title innerText="My Technologies" id={false} />
     <div class="small-screens">
-        <Ticker pausing={false}>
+        <Ticker pausing={true}>
             {#each tech as tech}
                 <TechIcon name={tech} />
             {/each}

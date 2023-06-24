@@ -5,6 +5,7 @@
 <div class="icon">
     <img src={`/assets/tech/${name}.svg`} alt={`Default ${name} icon`} />
     <img class="color" src={`/assets/tech/${name}-color.svg`} alt={`Color ${name} icon`} />
+    <p class="mulish">{name}</p>
 </div>
 
 <style>
@@ -28,6 +29,24 @@
         left: 0;
         opacity: 0;
         transition: 0.2s;
+    }
+
+    p {
+        opacity: 0;
+        position: absolute;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--clr-white);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        bottom: -2rem;
+        text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.5);
+        transition: 0.2s;
+    }
+
+    .icon:hover p {
+        opacity: 1;
     }
 
     @media screen and (min-width: 640px) {
