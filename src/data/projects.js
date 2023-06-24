@@ -24,7 +24,7 @@ export const projects = [
         subtitle: "Browser Extension",
         date: "2022",
         description:
-            "Gooey (GUI) is a startpage to replace the browser's default new tab in the form of a Firefox-Addon. Using vanilla JS, HTML, and CSS as a project to practice fundamentals, API calls, and build a CRUD GUI from scratch. Drawing from /r/startpages for some inspiration.",
+            "Gooey (GUI) is a startpage to replace the browser's default new tab in the form of a Firefox-Addon. Using vanilla JS, HTML, and CSS as a project to strengthen fundamentals, utilise an external API, and build a client-side CRUD interface from scratch. Drawing from /r/startpages for some inspiration.",
         image: "/assets/gooeystartpage.jpg",
         video: "/assets/gooeystartpagevideo.mp4",
         link: "https://addons.mozilla.org/en-CA/firefox/addon/gooey-startpage/", //Needs replacing when Chrome version is published
