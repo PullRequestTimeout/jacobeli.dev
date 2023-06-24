@@ -69,7 +69,7 @@
         position: fixed;
         color: var(--clr-black);
         z-index: 500;
-        height: 101vh;
+        height: calc(100vh + 2px);
         top: 0;
         left: 0;
         background-color: var(--clr-white);
@@ -159,7 +159,7 @@
     }
 
     article.open {
-        transform: translateY(0%);
+        transform: translateY(-1px);
         opacity: 1;
         pointer-events: all;
     }
