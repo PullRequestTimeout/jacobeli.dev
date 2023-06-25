@@ -56,11 +56,11 @@
     </label>
 
     <a href={link} class="media" target="_blank">
-        <div>
-            <video bind:offsetHeight={videoOffset} bind:this={videoElement} class:show={checked} loop muted>
+        <div bind:offsetHeight={videoOffset}>
+            <video bind:this={videoElement} class:show={checked} loop muted>
                 <source src={video} type="video/mp4" />
             </video>
-            <img src={image} alt="Screenshot of a project" />
+            <img src={image} loading="lazy" alt="Screenshot of a project" />
         </div>
     </a>
     <div class="arrow" class:show={checked} />
@@ -125,7 +125,8 @@
         z-index: -1;
         top: 0;
         left: 0;
-        width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
     }
 
     .arrow {
