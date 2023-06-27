@@ -125,7 +125,7 @@
         z-index: -1;
         top: 0;
         left: 0;
-        height: 100%;
+        width: 100%;
         aspect-ratio: 16/9;
     }
 
