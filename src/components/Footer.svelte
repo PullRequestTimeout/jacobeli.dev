@@ -9,9 +9,9 @@
     <h3 class="mulish"><span>Let's</span> <span>Collaborate</span></h3>
     <div class="socials">
         <SocialLink innerText="Email" url="mailto:jacobedruery@gmail.com" svg="email" />
-        <SocialLink innerText="Insta" url="https://www.instagram.com/caffeinatejake/" svg="insta" />
-        <SocialLink innerText="Github" url="https://github.com/PullRequestTimeout" svg="github" />
         <SocialLink innerText="LinkedIn" url="https://www.linkedin.com/in/jacob-druery/" svg="linkedin" />
+        <SocialLink innerText="Github" url="https://github.com/PullRequestTimeout" svg="github" />
+        <SocialLink innerText="Insta" url="https://www.instagram.com/caffeinatejake/" svg="insta" />
     </div>
 </footer>
 
