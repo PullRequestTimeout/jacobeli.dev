@@ -1,4 +1,8 @@
-<section>
+<script>
+    let vh = window.innerHeight
+</script>
+
+<section style="--vh-px: {`${vh}px`};">
     <div class="container">
         <div class="title">
             <h3 class="baloo">Jacob Druery</h3>
@@ -10,7 +14,7 @@
 
 <style>
     section {
-        height: calc(100vh - 8rem);
+        height: calc(var(--vh-px, 100vh) - 8rem);
         display: grid;
         align-items: end;
     }
@@ -50,7 +54,7 @@
 
     @media screen and (min-width: 768px) {
         section {
-            height: calc(100vh - 14rem);
+            height: calc(var(--vh-px, 100vh) - 14rem);
         }
 
         .container {
