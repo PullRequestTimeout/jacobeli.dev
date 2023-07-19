@@ -40,8 +40,9 @@
         transform: translate(-50%, -50%);
         background-color: rgba(161, 121, 69, 0.5);
         border-radius: 50%;
-        animation: blob 30s infinite;
+        animation: blob 30s infinite linear;
         z-index: -100;
+        aspect-ratio: 1.5;
         /* Man this is probably really computationally expensive to have a filter and backdrop filter, but bd-filter is buggy as hell */
         filter: blur(4rem);
     }
@@ -59,19 +60,19 @@
 
     @keyframes blob {
         0% {
-            aspect-ratio: 1;
+            /* aspect-ratio: 1; */
             height: 25rem;
-            transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1) rotate(0deg);
         }
         50% {
-            aspect-ratio: 1.5;
+            /* aspect-ratio: 1.5; */
             height: 15rem;
             transform: translate(-50%, -50%) scale(1.1) rotate(180deg);
         }
         100% {
-            aspect-ratio: 1;
+            /* aspect-ratio: 1; */
             height: 25rem;
-            transform: translate(-50%, -50%) scale(1) rotate(180deg);
+            transform: translate(-50%, -50%) scale(1) rotate(360deg);
         }
     }
 
