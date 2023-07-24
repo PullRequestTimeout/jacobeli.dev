@@ -34,7 +34,7 @@ export const projects = [
         subtitle: "svelte portfolio",
         date: "2023",
         description:
-            "That's right, this website! jacobeli.dev is my personal portfolio built with Svelte. Web Design in collaboration with Sean Makura.",
+            "That's right, this website! I rebuilt my personal portfolio website, jacobeli.dev, as a chance to play with Svelte and WebGL. Designed in collaboration with Sean Makura again after the great work he did on Rooted In Motion.",
         image: "/assets/jacobeli.jpg",
         video: "/assets/jacobelivideo.mp4",
         link: "https://jacobeli.dev",
