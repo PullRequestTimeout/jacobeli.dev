@@ -106,15 +106,21 @@
 
 <style>
     canvas {
+        display: none;
         pointer-events: none;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1000;
-        display: block;
         height: 100vh;
         width: 100vw;
         opacity: 1;
         mix-blend-mode: screen;
+    }
+
+    @media screen and (min-width: 1280px) {
+        canvas {
+            display: block;
+        }
     }
 </style>
