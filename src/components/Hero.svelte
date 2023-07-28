@@ -5,7 +5,7 @@
 <section style="--vh-px: {`${vh}px`};">
     <div class="container">
         <div class="title">
-            <h3 class="baloo">Jacob Druery</h3>
+            <h1 class="baloo">Jacob Druery</h1>
             <h2 class="mulish">Creative Developer</h2>
         </div>
         <p class="subtitle baloo">Crafting <em>bespoke</em> web experiences</p>
@@ -32,12 +32,13 @@
     }
 
     h2,
-    h3 {
+    h1 {
         text-transform: uppercase;
     }
 
     h2 {
         font-size: 3rem;
+        transform: translate(-0.2rem, 0.25rem);
     }
 
     @media screen and (min-width: 360px) {
@@ -86,7 +87,7 @@
         }
 
         p,
-        h3 {
+        h1 {
             font-size: 1.2rem;
         }
     }

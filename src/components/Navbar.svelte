@@ -8,7 +8,7 @@
 </script>
 
 <header class="mulish">
-    <h1>JACOBELI.DEV</h1>
+    <p>JACOBELI.DEV</p>
     <!-- <DarkModeToggle /> -->
     <input type="checkbox" id="navCheckbox" bind:checked />
     <label for="navCheckbox" />
@@ -32,7 +32,7 @@
         position: relative;
     }
 
-    h1 {
+    p {
         font-size: 1.2rem;
         font-weight: 100;
     }
