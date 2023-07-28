@@ -29,7 +29,7 @@
             function (event) {
                 touchStartY = event.changedTouches[0].screenY
             },
-            false
+            { passive: true }
         )
 
         gestureZone.addEventListener(
@@ -38,7 +38,7 @@
                 touchEndY = event.changedTouches[0].screenY
                 handleGesture()
             },
-            false
+            { passive: true }
         )
     })
 
@@ -51,7 +51,7 @@
 
 <div class="blur" class:open />
 <article class:open bind:this={gestureZone}>
-    <button on:click={handleClose} />
+    <button on:click={handleClose} aria-label="close" />
     <img src={image} alt={"Mockup of" + title} />
     <div>
         <h2 class="mulish">{title}</h2>
