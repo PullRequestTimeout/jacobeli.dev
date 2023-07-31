@@ -52,7 +52,7 @@
 <div class="blur" class:open />
 <article class:open bind:this={gestureZone}>
     <button on:click={handleClose} aria-label="close" />
-    <img src={image} alt={"Mockup of" + title} />
+    <img src={image} alt={"Mockup of " + title} />
     <div>
         <h2 class="mulish">{title}</h2>
         <h3 class="mulish">{subtitle}</h3>

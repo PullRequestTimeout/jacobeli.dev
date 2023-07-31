@@ -60,7 +60,7 @@
             <video bind:this={videoElement} class:show={checked} loop muted>
                 <source src={video} type="video/mp4" />
             </video>
-            <img src={image} loading="lazy" alt="Screenshot of a project" />
+            <img src={image} loading="lazy" alt={"Mockup of " + title} />
         </div>
     </a>
     <div class="arrow" class:show={checked} />
