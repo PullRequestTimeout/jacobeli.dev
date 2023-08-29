@@ -114,8 +114,8 @@ gl_FragColor = fragColor;
 <svg>
     <defs>
         <filter id="static">
-            <feTurbulence type="fractalNoise" baseFrequency="0.5">
-                <animate attributeName="seed" dur="1s" values="100;200" repeatCount="indefinite" />
+            <feTurbulence type="fractalNoise" baseFrequency="0.4">
+                <animate attributeName="seed" dur="1s" values="100;150" repeatCount="indefinite" />
             </feTurbulence>
         </filter>
     </defs>
